@@ -4,33 +4,34 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 mo.md("""
-Sultan Al-Ahmad  
-Aspiring Data Analyst | Python | Data Visualisation
-
-mo.md("""
 # Sultan Al Ahmad  
 Aspiring Data Analyst | Python | Data Visualisation
 """)
 
 mo.md("""
 ## About Me
-I am studying this data science module as an accounting and finance student with a strong interest in extracting insights from data. Throughout this module, I developed practical skills in analysing data, representing words in codes and visualising codes using Python. """)
+
+I am studying this data science module as an accounting and finance student with a strong interest in extracting insights from data. Throughout this module, I developed practical skills in analysing data, representing words in codes and visualising codes using Python.
 
 I am particularly interested in using data to support decision-making and uncover patterns that are not immediately visible.
-mo.md("""
+""")
 
-Technical Skills
+mo.md("""
+## Technical Skills
+
 Languages: Python  
-Libraries: pandas, matplotlib, seaborn """)
+Libraries: pandas, matplotlib, seaborn  
 Tools: marimo, GitHub  
+
 Core Skills:
 - Data Cleaning & Generating Codes  
-- Exploratory Data Analysis 
+- Exploratory Data Analysis  
 - Data Visualisation  
-- Statistical Thinking
+- Statistical Thinking  
 
-Project 1: Exploratory Data Analysis
-Goal:To understand patterns and relationships within a dataset  
+## Project 1: Exploratory Data Analysis
+
+Goal: To understand patterns and relationships within a dataset  
 
 Key Steps:
 - Cleaned missing and inconsistent data  
@@ -40,8 +41,8 @@ Key Steps:
 Impact:
 This assignment helped to strengthen my ability to take new data and transform it into meaningful insights.
 
+## Project 2: Data Visualisation & Data Analysis
 
-Project 2: Data Visualisation & Data Analysis
 Goal: Clear communication using visual resources  
 
 Key Steps:
@@ -52,26 +53,25 @@ Key Steps:
 Impact:
 Improved my ability to present data that is understandable for everyone.
 
-Key Insights:
-- Data cleaning is crucial before analysing it
-- Visualising data makes it easier to interpret e.g by using graphs & charts
+## Key Insights
+
+- Data cleaning is crucial before analysing it  
+- Visualising data makes it easier to interpret e.g by using graphs & charts  
 - Any types of datasets can reveal meaningful trends  
 
-Learning Journey:
-Before this module, I had a lack of experience and knowledge with data analysis. 
+## Learning Journey
+
+Before this module, I had a lack of experience and knowledge with data analysis.  
 Also, I found it challenging to work with datasets and write structured Python code.
 
 During the group assignments and this individual task, I was able to keep practicing, which boosted my confidence in:
+
 - Writing clean and structured code  
 - Analysing datasets using pandas  
 - Creating effective visualisations  
 
 Moreover, I was able to open myself up to marimo notebooks to transform my analysis into an interactive webpage.
-
-import marimo as mo
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+""")
 
 # Simulated realistic dataset
 data = {
@@ -84,7 +84,7 @@ df = pd.DataFrame(data)
 # Basic analysis
 print(df.describe())
 
-Visualisation
+# Visualisation
 plt.figure(figsize=(6,4))
 sns.regplot(x="Hours_Studied", y="Exam_Score", data=df)
 
@@ -95,14 +95,16 @@ plt.ylabel("Exam Score")
 plt.show()
 
 mo.md("""
+## Insight From The Above Codes
 
-Insight From The Above Codes:
+This clearly shows a strong positive relationship between hours studied and exam scores.
 
-This clearly shows a strong positive relationship between hours studied and exam scores. 
 This means that the more hours put into study time, the higher the exam scores, which suggests that there is a direct correlation between time put into studying and performance.
 
 This type of analysis demonstrates how data can be used to support decision-making and identify trends.
-Simulated realistic student dataset
+""")
+
+# Simulated realistic student dataset
 data = {
     "Hours_Studied": [1,2,3,4,5,6,7,8,9,10],
     "Attendance": [60,65,70,75,80,85,90,92,95,97],
@@ -121,6 +123,7 @@ This dataset represents student behaviour.
 
 df.head()
 
+mo.md("""
 Variables include:
 
 - Hours Studied  
@@ -130,6 +133,7 @@ Variables include:
 - Exam Score  
 
 The goal is to analyse how study habits influence academic results.
+""")
 
 df.head()
 
@@ -137,7 +141,6 @@ df.head()
 
 mo.md("""
 ## Data Cleaning
-""")
 
 Checking for missing values ensures the dataset is reliable before analysis.
 """)
@@ -154,7 +157,7 @@ Summary statistics help understand the distribution of the dataset.
 
 df.describe()
 
-VISUALISATION 1 - REGRESSION
+# VISUALISATION 1 - REGRESSION
 
 mo.md("""
 ## Visualisation 1: Study Time vs Exam Score
@@ -174,10 +177,10 @@ plt.title("Hours Studied vs Exam Score")
 
 plt.show()
 
-VISUALISATION 2 - SCATTER
+# VISUALISATION 2 - SCATTER
 
 mo.md("""
-Visualisation 2: Attendance vs Exam Score
+## Visualisation 2: Attendance vs Exam Score
 
 This scatter plot highlights how attendance influences exam performance.
 """)
@@ -194,10 +197,10 @@ plt.title("Attendance vs Exam Score")
 
 plt.show()
 
-VISUALISATION 3 - HISTOGRAM
+# VISUALISATION 3 - HISTOGRAM
 
 mo.md("""
-Visualisation 3: Exam Score Distribution
+## Visualisation 3: Exam Score Distribution
 
 This histogram shows how exam scores are distributed.
 """)
@@ -213,7 +216,7 @@ plt.title("Distribution of Exam Scores")
 
 plt.show()
 
-VISUALISATION 4 - BOX PLOT
+# VISUALISATION 4 - BOX PLOT
 
 mo.md("""
 ## Visualisation 4: Exam Score Spread
@@ -230,11 +233,10 @@ sns.boxplot(
 plt.title("Exam Score Box Plot")
 
 plt.show()
-    y=df["Exam_Score"]
-)
 
-plt.title("Exam Score Box Plot")
+mo.md("""
+## Contact Details
 
-Contact Details:
 GitHub: https://github.com/s-up100  
 Email: sultan.al-ahmad@bayes.city.ac.uk
+""")
