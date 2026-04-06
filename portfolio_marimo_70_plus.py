@@ -3,65 +3,101 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# --------------------------------
-# PAGE TITLE
-# --------------------------------
+mo.md("""
+Sultan Al-Ahmad  
+Aspiring Data Analyst | Python | Data Visualisation
 
 mo.md("""
-# 👋 Sultan Al-Ahmad  
-**Aspiring Data Analyst | Python | Data Visualisation**
-""")
+About Me
+I am studying this data science module as an accounting and finance student with a strong interest in extracting insights from data and communicating them effectively. 
+Throughout this module, I developed practical skills in analysing data, representing words in codes and visualising codes using Python.
 
-# --------------------------------
-# ABOUT ME
-# --------------------------------
-
+I am particularly interested in using data to support decision-making and uncover patterns that are not immediately visible.
 mo.md("""
-## About Me
 
-I am an Accounting and Finance student studying Data Science with a strong interest in analysing data and communicating insights effectively.
-
-Throughout this module, I developed skills in:
-
-- Data Cleaning  
-- Exploratory Data Analysis  
+Technical Skills
+Languages: Python  
+Libraries: pandas, matplotlib, seaborn  
+Tools: marimo, GitHub  
+Core Skills:
+- Data Cleaning & Generating Codes  
+- Exploratory Data Analysis 
 - Data Visualisation  
-- Statistical Thinking  
+- Statistical Thinking
 
-This portfolio demonstrates my ability to transform data into meaningful insights.
-""")
+Project 1: Exploratory Data Analysis
+Goal:To understand patterns and relationships within a dataset  
 
-# --------------------------------
-# TECHNICAL SKILLS
-# --------------------------------
+Key Steps:
+- Cleaned missing and inconsistent data  
+- Generated descriptive statistics  
+- Identified trends and correlations  
+
+Impact:
+This assignment helped to strengthen my ability to take new data and transform it into meaningful insights.
+
+
+Project 2: Data Visualisation & Data Analysis
+Goal: Clear communication using visual resources  
+
+Key Steps:
+- I was able to create clear and ready to read charts  
+- Similarities and differences between variables visually  
+- Highlighted key points for interpretation  
+
+Impact:
+Improved my ability to present data that is understandable for everyone.
+
+Key Insights:
+- Data cleaning is crucial before analysing it
+- Visualising data makes it easier to interpret e.g by using graphs & charts
+- Any types of datasets can reveal meaningful trends  
+
+Learning Journey:
+Before this module, I had a lack of experience and knowledge with data analysis. 
+Also, I found it challenging to work with datasets and write structured Python code.
+
+During the group assignments and this individual task, I was able to keep practicing, which boosted my confidence in:
+- Writing clean and structured code  
+- Analysing datasets using pandas  
+- Creating effective visualisations  
+
+Moreover, I was able to open myself up to marimo notebooks to transform my analysis into an interactive webpage.
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+Simulated realistic dataset
+data = {
+    "Hours_Studied": [1,2,3,4,5,6,7,8],
+    "Exam_Score": [50,55,60,65,70,78,85,90]
+}
+
+df = pd.DataFrame(data)
+
+Basic analysis
+print(df.describe())
+
+Visualisation
+plt.figure(figsize=(6,4))
+sns.regplot(x="Hours_Studied", y="Exam_Score", data=df)
+
+plt.title("Relationship Between Study Time and Exam Performance")
+plt.xlabel("Hours Studied")
+plt.ylabel("Exam Score")
+
+plt.show()
 
 mo.md("""
-## Technical Skills
 
-**Languages**
-- Python  
+Insight From The Above Codes:
 
-**Libraries**
-- pandas  
-- matplotlib  
-- seaborn  
+This clearly shows a strong positive relationship between hours studied and exam scores. 
+This means that the more hours put into study time, the higher the exam scores, which suggests that there is a direct correlation between time put into studying and performance.
 
-**Tools**
-- marimo  
-- GitHub  
-
-**Core Skills**
-- Data Cleaning  
-- Exploratory Data Analysis (EDA)  
-- Data Visualisation  
-- Correlation Analysis  
-""")
-
-# --------------------------------
-# DATASET CREATION
-# --------------------------------
-
-# Simulated realistic student dataset
+This type of analysis demonstrates how data can be used to support decision-making and identify trends.
+Simulated realistic student dataset
 data = {
     "Hours_Studied": [1,2,3,4,5,6,7,8,9,10],
     "Attendance": [60,65,70,75,80,85,90,92,95,97],
@@ -73,7 +109,7 @@ data = {
 df = pd.DataFrame(data)
 
 mo.md("""
-## Dataset Overview
+Dataset Overview
 
 This dataset represents student behaviour and academic performance.
 
@@ -86,13 +122,10 @@ Variables include:
 - Exam Score  
 
 The goal is to analyse how study habits influence academic results.
-""")
 
 df.head()
 
-# --------------------------------
-# DATA CLEANING
-# --------------------------------
+DATA CLEANING
 
 mo.md("""
 ## Data Cleaning
@@ -102,9 +135,7 @@ Checking for missing values ensures the dataset is reliable before analysis.
 
 df.isnull().sum()
 
-# --------------------------------
 # DESCRIPTIVE STATISTICS
-# --------------------------------
 
 mo.md("""
 ## Descriptive Statistics
@@ -114,9 +145,7 @@ Summary statistics help understand the distribution of the dataset.
 
 df.describe()
 
-# --------------------------------
-# VISUALISATION 1 - REGRESSION
-# --------------------------------
+VISUALISATION 1 - REGRESSION
 
 mo.md("""
 ## Visualisation 1: Study Time vs Exam Score
@@ -136,12 +165,10 @@ plt.title("Hours Studied vs Exam Score")
 
 plt.show()
 
-# --------------------------------
-# VISUALISATION 2 - SCATTER
-# --------------------------------
+VISUALISATION 2 - SCATTER
 
 mo.md("""
-## Visualisation 2: Attendance vs Exam Score
+Visualisation 2: Attendance vs Exam Score
 
 This scatter plot highlights how attendance influences exam performance.
 """)
@@ -158,12 +185,10 @@ plt.title("Attendance vs Exam Score")
 
 plt.show()
 
-# --------------------------------
-# VISUALISATION 3 - HISTOGRAM
-# --------------------------------
+VISUALISATION 3 - HISTOGRAM
 
 mo.md("""
-## Visualisation 3: Exam Score Distribution
+Visualisation 3: Exam Score Distribution
 
 This histogram shows how exam scores are distributed.
 """)
@@ -179,14 +204,12 @@ plt.title("Distribution of Exam Scores")
 
 plt.show()
 
-# --------------------------------
-# VISUALISATION 4 - BOX PLOT
-# --------------------------------
+VISUALISATION 4 - BOX PLOT
 
 mo.md("""
 ## Visualisation 4: Exam Score Spread
 
-The box plot highlights variation and possible outliers.
+The box plot highlights variation and possible anomalies.
 """)
 
 plt.figure(figsize=(6,4))
@@ -197,74 +220,6 @@ sns.boxplot(
 
 plt.title("Exam Score Box Plot")
 
-plt.show()
-
-# --------------------------------
-# VISUALISATION 5 - HEATMAP (HIGH MARK SKILL)
-# --------------------------------
-
-mo.md("""
-## Visualisation 5: Correlation Heatmap
-
-This heatmap shows relationships between all variables in the dataset.
-""")
-
-plt.figure(figsize=(6,4))
-
-sns.heatmap(
-    df.corr(),
-    annot=True,
-    cmap="coolwarm"
-)
-
-plt.title("Correlation Heatmap")
-
-plt.show()
-
-# --------------------------------
-# KEY INSIGHTS
-# --------------------------------
-
-mo.md("""
-## Key Insights
-
-From the analysis:
-
-- Students who study longer tend to achieve higher exam scores.  
-- Higher attendance is positively related to academic performance.  
-- Completing more assignments improves exam results.  
-- Sleep hours show a moderate relationship with performance.  
-- Strong correlations exist between study behaviour and success.
-
-These insights demonstrate how data analysis supports evidence-based decision-making.
-""")
-
-# --------------------------------
-# LEARNING JOURNEY
-# --------------------------------
-
-mo.md("""
-## Learning Journey
-
-Before this module, I had limited experience working with data and programming.
-
-Through continuous practice, I developed confidence in:
-
-- Writing structured Python code  
-- Cleaning and analysing datasets  
-- Creating meaningful visualisations  
-- Using marimo to build interactive webpages  
-
-This portfolio demonstrates the progress made throughout my learning journey.
-""")
-
-# --------------------------------
-# CONTACT DETAILS
-# --------------------------------
-
-mo.md("""
-## Contact
-
+Contact Details:
 GitHub: https://github.com/s-up100  
-Email: sultan.al-ahmad@bayes.city.ac.uk  
-""")
+Email: sultan.al-ahmad@bayes.city.ac.uk
