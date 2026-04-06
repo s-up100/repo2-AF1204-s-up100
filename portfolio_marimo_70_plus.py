@@ -8,16 +8,20 @@ Sultan Al-Ahmad
 Aspiring Data Analyst | Python | Data Visualisation
 
 mo.md("""
-About Me
-I am studying this data science module as an accounting and finance student with a strong interest in extracting insights from data and communicating them effectively. 
-Throughout this module, I developed practical skills in analysing data, representing words in codes and visualising codes using Python.
+# Sultan Al Ahmad  
+Aspiring Data Analyst | Python | Data Visualisation
+""")
+
+mo.md("""
+## About Me
+I am studying this data science module as an accounting and finance student with a strong interest in extracting insights from data. Throughout this module, I developed practical skills in analysing data, representing words in codes and visualising codes using Python. """)
 
 I am particularly interested in using data to support decision-making and uncover patterns that are not immediately visible.
 mo.md("""
 
 Technical Skills
 Languages: Python  
-Libraries: pandas, matplotlib, seaborn  
+Libraries: pandas, matplotlib, seaborn """)
 Tools: marimo, GitHub  
 Core Skills:
 - Data Cleaning & Generating Codes  
@@ -64,11 +68,12 @@ During the group assignments and this individual task, I was able to keep practi
 
 Moreover, I was able to open myself up to marimo notebooks to transform my analysis into an interactive webpage.
 
+import marimo as mo
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-Simulated realistic dataset
+# Simulated realistic dataset
 data = {
     "Hours_Studied": [1,2,3,4,5,6,7,8],
     "Exam_Score": [50,55,60,65,70,78,85,90]
@@ -76,7 +81,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-Basic analysis
+# Basic analysis
 print(df.describe())
 
 Visualisation
@@ -109,9 +114,12 @@ data = {
 df = pd.DataFrame(data)
 
 mo.md("""
-Dataset Overview
+## Dataset Overview
 
-This dataset represents student behaviour and academic performance.
+This dataset represents student behaviour.
+""")
+
+df.head()
 
 Variables include:
 
@@ -125,10 +133,11 @@ The goal is to analyse how study habits influence academic results.
 
 df.head()
 
-DATA CLEANING
+# DATA CLEANING
 
 mo.md("""
 ## Data Cleaning
+""")
 
 Checking for missing values ensures the dataset is reliable before analysis.
 """)
@@ -215,6 +224,12 @@ The box plot highlights variation and possible anomalies.
 plt.figure(figsize=(6,4))
 
 sns.boxplot(
+    y=df["Exam_Score"]
+)
+
+plt.title("Exam Score Box Plot")
+
+plt.show()
     y=df["Exam_Score"]
 )
 
